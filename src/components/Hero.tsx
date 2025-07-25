@@ -7,9 +7,32 @@ const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center pt-20 overflow-hidden gradient-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Content */}
-          <div className="space-y-8 animate-fade-in">
+        <div className="relative lg:grid lg:grid-cols-2 gap-12 items-center">
+          {/* Hero Image - Background on mobile */}
+          <div className="absolute inset-0 lg:relative lg:order-2 animate-scale-in">
+            <div className="relative h-full">
+              <img
+                src={heroImage}
+                alt="Alpha Odiero - Web & Graphics Designer"
+                className="w-full h-full lg:h-auto object-cover lg:object-contain rounded-2xl shadow-large hover-lift opacity-20 lg:opacity-100"
+              />
+              
+              {/* Floating Elements - hidden on mobile */}
+              <div className="hidden lg:block absolute -top-4 -right-4 w-20 h-20 bg-primary/20 rounded-full floating-element"></div>
+              <div className="hidden lg:block absolute -bottom-4 -left-4 w-16 h-16 bg-accent/20 rounded-full floating-element" style={{animationDelay: '2s'}}></div>
+              
+              {/* Skill Badge - hidden on mobile */}
+              <div className="hidden lg:block absolute top-4 left-4 bg-white/95 backdrop-blur-sm rounded-lg p-3 shadow-medium">
+                <div className="flex items-center space-x-2">
+                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                  <span className="text-sm font-medium text-gray-800">Available</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Content - Foreground on mobile */}
+          <div className="relative z-10 space-y-8 animate-fade-in lg:order-1">
             <div className="space-y-4">
               <div className="inline-block">
                 <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold">
@@ -76,29 +99,6 @@ const Hero = () => {
               <div className="text-center">
                 <div className="text-2xl font-bold text-primary">30+</div>
                 <div className="text-sm text-muted-foreground">Happy Clients</div>
-              </div>
-            </div>
-          </div>
-
-          {/* Hero Image */}
-          <div className="relative lg:block animate-scale-in">
-            <div className="relative">
-              <img
-                src={heroImage}
-                alt="Alpha Odiero - Web & Graphics Designer"
-                className="w-full h-auto rounded-2xl shadow-large hover-lift"
-              />
-              
-              {/* Floating Elements */}
-              <div className="absolute -top-4 -right-4 w-20 h-20 bg-primary/20 rounded-full floating-element"></div>
-              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-accent/20 rounded-full floating-element" style={{animationDelay: '2s'}}></div>
-              
-              {/* Skill Badge */}
-              <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm rounded-lg p-3 shadow-medium">
-                <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                  <span className="text-sm font-medium text-gray-800">Available</span>
-                </div>
               </div>
             </div>
           </div>
