@@ -14,7 +14,7 @@ const Hero = () => {
               <img
                 src={heroImage}
                 alt="Alpha Odiero - Web & Graphics Designer"
-                className="w-full h-full lg:h-auto object-cover lg:object-contain rounded-2xl shadow-large hover-lift opacity-80 lg:opacity-100"
+                className="w-full h-full lg:h-auto object-cover lg:object-contain rounded-2xl shadow-large hover-lift opacity-100"
               />
               
               {/* Floating Elements - hidden on mobile */}
