@@ -14,7 +14,7 @@ const Hero = () => {
               <img
                 src={heroImage}
                 alt="Alpha Odiero - Web & Graphics Designer"
-                className="w-full h-full lg:h-auto object-cover lg:object-contain rounded-2xl shadow-large hover-lift opacity-40 lg:opacity-100"
+                className="w-full h-full lg:h-auto object-cover lg:object-contain rounded-2xl shadow-large hover-lift opacity-80 lg:opacity-100"
               />
               
               {/* Floating Elements - hidden on mobile */}
@@ -32,7 +32,7 @@ const Hero = () => {
           </div>
 
           {/* Content - Foreground on mobile */}
-          <div className="relative z-10 space-y-8 animate-fade-in lg:order-1">
+          <div className="relative z-10 space-y-8 animate-fade-in lg:order-1 bg-background/80 lg:bg-transparent backdrop-blur-sm lg:backdrop-blur-none rounded-2xl lg:rounded-none p-6 lg:p-0">
             <div className="space-y-4">
               <div className="inline-block">
                 <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold">
